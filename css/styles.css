@@ -1,0 +1,216 @@
+:root{
+    --blanco:#ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris:#757575; 
+    --grisClaro: #dfe9f3;
+}
+html {
+    font-size:62.5%;    
+}
+
+body{
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+}
+
+.boton{
+    background-color: var(--secundario);
+    color:var(--blanco);
+    padding: 1rem 3rem;
+    margin-top:2rem;
+    font-weight:700;
+    text-decoration:none;
+    font-size:2rem;
+    text-transform: uppercase;
+    border-radius:.5rem;
+    border:none;
+    width:80%;
+    text-align: center;
+}
+
+/*@media (min-width:480px){
+    .boton{
+        width:auto;    
+    }
+}*/
+
+/*@media (min-width:768px){
+    .boton{
+        width:auto;    
+    }
+}*/
+
+@media (min-width:780px){
+    .boton{
+        width:auto;    
+    }
+}
+
+/*@media (min-width:1140px){
+    .boton{
+        width:auto;    
+    }
+}*/
+
+/* Los rem son medidas con respecto al documento 
+1 rem=10 px pero se adapta a las pantallas pequeñas con alta 
+densidad de píxeles*/
+
+.titulo {
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+.navegacion-principal{
+    display:flex;
+    align-items: center;
+    /*flex-direction: column;*/
+    margin: 0px auto;
+    justify-content: space-around;
+}
+
+@media (min-width:768px){
+    .navegacion-principal{
+    /*480px 768px 1140px*/
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+}
+
+/*@media (min-width:1140px){
+    body{
+        background-color: aquamarine;
+    }
+
+}*/
+
+.nav-bg{
+    background-color: var(--secundario);
+
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+.navegacion-principal a{
+    /*padding: 1rem;*/
+    padding: 10px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    /*text-align: center;*/
+    text-decoration: none;
+
+}
+
+.navegacion-principal a:hover{
+    color: var(--oscuro);
+    background-color: var(--primario);
+    
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    height: 450px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom:2rem;
+}
+
+.h2{
+    text-align:center;
+}
+
+.contenido-hero{
+    background-color: rgba(0,0,0,.6);
+    width:100%;
+    height:100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2{
+    font-weight:700;
+    color:var(--blanco);
+    font-size: 3rem;
+
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color:var(--blanco);    
+}
+
+.location  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sombra{
+    background-color: var(--blanco);
+    box-shadow: -1px -2px 8px -1px rgba(0,0,0,0.57);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.servicios{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns:repeat(3, 1fr); /*3veces1fraccion*/
+    column-gap: 1rem;
+}
+
+.servicio{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio .iconos{
+    width:15rem;
+    height:15rem; /*150px*/
+    background-color: var(--primario);
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.servicio h3{
+    color:var(--secundario);
+    font-weight:normal;
+}
+
+form{
+    background-color:var(--gris);
+    border-radius: 20%;
+    max-width: 100rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+form h3{
+    color: var(--primario);
+}
+
